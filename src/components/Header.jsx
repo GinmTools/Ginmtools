@@ -41,7 +41,7 @@ export default function Header() {
           >
             <Image
               src="/images/ginb-logo-transparent.png"
-              alt="GINB Tools — Trusted Tools for Professionals Since 1958"
+              alt="GINB TOOLS — One Stop. All Solutions Since 1958"
               width={373}
               height={125}
               className="h-[90px] w-auto object-contain sm:h-[96px] md:h-[104px]"

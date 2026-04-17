@@ -77,7 +77,7 @@ export default function Hero() {
           {/* Styled Text: GINB in white, TOOLS in red */}
           <div className="-mt-2 flex min-w-0 flex-col items-center sm:-mt-0 sm:-ml-3 sm:items-start md:-ml-4 lg:-ml-5">
             <h2 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
-              <span className="text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">GINB</span>
+              <span className="text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">GINM</span>
               <span className="text-brand-red drop-shadow-[0_2px_10px_rgba(220,38,38,0.4)]">TOOLS</span>
             </h2>
             <div className="mt-2 h-[2px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent" />

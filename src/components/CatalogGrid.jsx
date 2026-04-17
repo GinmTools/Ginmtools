@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Search, Download } from "lucide-react";
+import { Search, Download, FileText } from "lucide-react";
 import { catalogs } from "@/data/catalogs";
 
 export default function CatalogGrid() {
@@ -60,37 +59,33 @@ export default function CatalogGrid() {
               id={`catalog-card-${catalog.id}`}
               className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:z-[1] after:h-0.5 after:origin-left after:scale-x-0 after:bg-brand-red after:transition-transform after:duration-300 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-100/80 group-hover:after:scale-x-100"
             >
-              {/* Thumbnail */}
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                <Image
-                  src={catalog.image_url}
-                  alt={`${catalog.title} catalog cover`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  aria-hidden
-                />
-                <span className="absolute left-3 top-3 z-[2] rounded-md bg-industrial-black/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+              {/* Brand Name Thumbnail */}
+              <div className="relative flex h-48 items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#232323] to-[#111111]">
+                {/* Decorative background pattern */}
+                <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} aria-hidden />
+                {/* Red accent line */}
+                <div className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-brand-red to-red-400 transition-all duration-500 group-hover:w-full" aria-hidden />
+                {/* PDF icon watermark */}
+                <FileText className="pointer-events-none absolute right-4 top-4 h-10 w-10 text-white/[0.06]" aria-hidden />
+                {/* Brand name */}
+                <span className="relative z-[1] px-6 text-center text-lg font-extrabold uppercase tracking-wider text-white/90 transition-colors duration-300 group-hover:text-white">
+                  {catalog.title}
+                </span>
+                {/* Category badge */}
+                <span className="absolute left-3 top-3 z-[2] rounded-md bg-brand-red/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
                   {catalog.category}
                 </span>
               </div>
 
               {/* Card Body */}
               <div className="p-5">
-                <h3 className="text-base font-bold text-industrial-black">{catalog.title}</h3>
-                <div className="mt-2 flex items-center gap-3 text-xs text-gray-400">
-                  <span>Edition {catalog.year}</span>
-                  <span className="h-1 w-1 rounded-full bg-gray-300" />
-                  <span>{catalog.size}</span>
-                </div>
+                <h3 className="text-base font-bold text-industrial-black line-clamp-2">{catalog.title}</h3>
                 <a
                   id={`download-btn-${catalog.id}`}
                   href={catalog.pdf_download_url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  download
                   className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-red px-4 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-red-dark hover:shadow-md hover:shadow-red-500/20"
                 >
                   <Download className="h-4 w-4" />
