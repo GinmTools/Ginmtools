@@ -2,8 +2,8 @@
 const nextConfig = {
   // Static HTML export for GitHub Pages (no Node server).
   output: "export",
-  basePath: "/Ginmtools",
-  assetPrefix: "/Ginmtools",
+  basePath: process.env.NODE_ENV === 'production' ? '/Ginmtools' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Ginmtools' : '',
   images: {
     unoptimized: true,
     remotePatterns: [

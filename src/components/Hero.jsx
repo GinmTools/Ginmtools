@@ -4,15 +4,13 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Shield, Zap, Award } from "lucide-react";
 
-const basePath = process.env.NODE_ENV === 'production' ? '/Ginmtools' : '';
-
 const heroSlides = [
-  `${basePath}/images/hero-slides/pexels-benjaminlehman-11398216.webp`,
-  `${basePath}/images/hero-slides/pexels-christina99999-30413428.webp`,
-  `${basePath}/images/hero-slides/pexels-collab-media-173741945-15060421.webp`,
-  `${basePath}/images/hero-slides/pexels-cottonbro-7484788.webp`,
-  `${basePath}/images/hero-slides/pexels-ismaelcampos-16720099.webp`,
-  `${basePath}/images/hero-slides/pexels-karola-g-7285926.webp`,
+  "/images/hero-slides/pexels-benjaminlehman-11398216.webp",
+  "/images/hero-slides/pexels-christina99999-30413428.webp",
+  "/images/hero-slides/pexels-collab-media-173741945-15060421.webp",
+  "/images/hero-slides/pexels-cottonbro-7484788.webp",
+  "/images/hero-slides/pexels-ismaelcampos-16720099.webp",
+  "/images/hero-slides/pexels-karola-g-7285926.webp",
 ];
 
 export default function Hero() {
@@ -68,7 +66,7 @@ export default function Hero() {
           {/* House Icon */}
           <div className="shrink-0 leading-none -mr-10 sm:-mr-[4.5rem] md:-mr-24 lg:-mr-28">
             <Image
-              src={`${basePath}/images/ginb-icon.png`}
+              src="/images/ginb-icon.png"
               alt="GINB Tools Icon"
               width={293}
               height={176}

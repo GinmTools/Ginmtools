@@ -20,11 +20,16 @@ export const metadata = {
     "professional tools",
     "GINB Tools",
   ],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: "GINB Tools | Professional Tool Supplier Since 1958",
     description:
       "Industrial-grade tools engineered for performance. Trusted by enterprises worldwide.",
     type: "website",
+    images: ['/images/ginb-logo-transparent.png'],
   },
 };
 
