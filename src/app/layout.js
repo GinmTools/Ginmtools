@@ -21,14 +21,6 @@ export const metadata = {
     "professional tools",
     "GINB Tools",
   ],
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '32x32' },
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' }
-    ],
-    apple: '/apple-touch-icon.png',
-    shortcut: '/favicon.ico',
-  },
   openGraph: {
     title: "GINB Tools | Professional Tool Supplier Since 1958",
     description:
@@ -41,12 +33,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </head>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
