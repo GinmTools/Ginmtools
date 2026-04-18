@@ -2,6 +2,8 @@
 const nextConfig = {
   // Static HTML export for GitHub Pages (no Node server).
   output: "export",
+  basePath: "/Ginmtools",
+  assetPrefix: "/Ginmtools",
   images: {
     unoptimized: true,
     remotePatterns: [
