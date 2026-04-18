@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ginbLogo from "@/images/ginb-logo-transparent.png";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +30,7 @@ export const metadata = {
     description:
       "Industrial-grade tools engineered for performance. Trusted by enterprises worldwide.",
     type: "website",
-    images: ['/images/ginb-logo-transparent.png'],
+    images: [ginbLogo.src],
   },
 };
 

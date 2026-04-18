@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ginbLogo from "@/images/ginb-logo-transparent.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,12 +11,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Image
-              src="/images/ginb-logo-transparent.png"
+              src={ginbLogo}
               alt="GINB Tools Logo"
               width={373}
               height={125}
               className="h-20 w-auto object-contain"
               style={{ filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.4)) drop-shadow(0 2px 8px rgba(220,38,38,0.25))' }}
+              placeholder="blur"
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-gray-500">
               Professional tool supplier since 1958. Industrial-grade solutions for enterprises, construction firms, and manufacturers worldwide.

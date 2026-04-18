@@ -4,13 +4,22 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Shield, Zap, Award } from "lucide-react";
 
+// Import hero slide images
+import heroSlide1 from "@/images/hero-slides/pexels-benjaminlehman-11398216.webp";
+import heroSlide2 from "@/images/hero-slides/pexels-christina99999-30413428.webp";
+import heroSlide3 from "@/images/hero-slides/pexels-collab-media-173741945-15060421.webp";
+import heroSlide4 from "@/images/hero-slides/pexels-cottonbro-7484788.webp";
+import heroSlide5 from "@/images/hero-slides/pexels-ismaelcampos-16720099.webp";
+import heroSlide6 from "@/images/hero-slides/pexels-karola-g-7285926.webp";
+import ginbIcon from "@/images/ginb-icon.png";
+
 const heroSlides = [
-  "/images/hero-slides/pexels-benjaminlehman-11398216.webp",
-  "/images/hero-slides/pexels-christina99999-30413428.webp",
-  "/images/hero-slides/pexels-collab-media-173741945-15060421.webp",
-  "/images/hero-slides/pexels-cottonbro-7484788.webp",
-  "/images/hero-slides/pexels-ismaelcampos-16720099.webp",
-  "/images/hero-slides/pexels-karola-g-7285926.webp",
+  heroSlide1,
+  heroSlide2,
+  heroSlide3,
+  heroSlide4,
+  heroSlide5,
+  heroSlide6,
 ];
 
 export default function Hero() {
@@ -52,6 +61,7 @@ export default function Hero() {
             priority={i === 0}
             className="animate-ken-burns object-cover"
             sizes="100vw"
+            placeholder="blur"
           />
         </div>
       ))}
@@ -66,12 +76,13 @@ export default function Hero() {
           {/* House Icon */}
           <div className="shrink-0 leading-none -mr-10 sm:-mr-[4.5rem] md:-mr-24 lg:-mr-28">
             <Image
-              src="/images/ginb-icon.png"
+              src={ginbIcon}
               alt="GINB Tools Icon"
               width={293}
               height={176}
               className="block h-28 w-auto max-w-none object-left object-contain drop-shadow-[0_4px_20px_rgba(220,38,38,0.4)] sm:h-36 md:h-44"
               priority
+              placeholder="blur"
             />
           </div>
           {/* Styled Text: GINB in white, TOOLS in red */}
