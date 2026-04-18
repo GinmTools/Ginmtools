@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ginbLogo from "@/images/ginb-logo-transparent.png";
+import ginbLogo from "../images/ginb-logo-transparent.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

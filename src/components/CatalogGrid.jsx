@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Search, Download, FileText } from "lucide-react";
-import { catalogs } from "@/data/catalogs";
+// Import catalogs data
+import { catalogs } from "../data/catalogs.js";
 
 export default function CatalogGrid() {
   const [search, setSearch] = useState("");

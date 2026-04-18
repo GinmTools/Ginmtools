@@ -5,13 +5,13 @@ import Image from "next/image";
 import { Shield, Zap, Award } from "lucide-react";
 
 // Import hero slide images
-import heroSlide1 from "@/images/hero-slides/pexels-benjaminlehman-11398216.webp";
-import heroSlide2 from "@/images/hero-slides/pexels-christina99999-30413428.webp";
-import heroSlide3 from "@/images/hero-slides/pexels-collab-media-173741945-15060421.webp";
-import heroSlide4 from "@/images/hero-slides/pexels-cottonbro-7484788.webp";
-import heroSlide5 from "@/images/hero-slides/pexels-ismaelcampos-16720099.webp";
-import heroSlide6 from "@/images/hero-slides/pexels-karola-g-7285926.webp";
-import ginbIcon from "@/images/ginb-icon.png";
+import heroSlide1 from "../images/hero-slides/pexels-benjaminlehman-11398216.webp";
+import heroSlide2 from "../images/hero-slides/pexels-christina99999-30413428.webp";
+import heroSlide3 from "../images/hero-slides/pexels-collab-media-173741945-15060421.webp";
+import heroSlide4 from "../images/hero-slides/pexels-cottonbro-7484788.webp";
+import heroSlide5 from "../images/hero-slides/pexels-ismaelcampos-16720099.webp";
+import heroSlide6 from "../images/hero-slides/pexels-karola-g-7285926.webp";
+import ginbIcon from "../images/ginb-icon.png";
 
 const heroSlides = [
   heroSlide1,

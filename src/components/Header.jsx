@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import ginbLogo from "@/images/ginb-logo-transparent.png";
+import ginbLogo from "../images/ginb-logo-transparent.png";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);

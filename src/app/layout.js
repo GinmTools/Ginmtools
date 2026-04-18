@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ginbLogo from "@/images/ginb-logo-transparent.png";
+import ginbLogo from "../images/ginb-logo-transparent.png";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,10 +21,6 @@ export const metadata = {
     "professional tools",
     "GINB Tools",
   ],
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
   openGraph: {
     title: "GINB Tools | Professional Tool Supplier Since 1958",
     description:

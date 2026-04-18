@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { testimonials } from "@/data/testimonials";
+// Import testimonials data
+import { testimonials } from "../data/testimonials.js";
 
 export default function TestimonialSlider() {
   const [current, setCurrent] = useState(0);
