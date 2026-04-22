@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <Image
             src={src}
-            alt={`GINB Tools hero slide ${i + 1}`}
+            alt={`GINM Tools hero slide ${i + 1}`}
             fill
             priority={i === 0}
             className="animate-ken-burns object-cover"
@@ -77,7 +77,7 @@ export default function Hero() {
           <div className="shrink-0 leading-none -mr-10 sm:-mr-[4.5rem] md:-mr-24 lg:-mr-28">
             <Image
               src={ginbIcon}
-              alt="GINB Tools Icon"
+              alt="GINM Tools Icon"
               width={293}
               height={176}
               className="block h-28 w-auto max-w-none object-left object-contain drop-shadow-[0_4px_20px_rgba(220,38,38,0.4)] sm:h-36 md:h-44"
@@ -85,7 +85,7 @@ export default function Hero() {
               placeholder="blur"
             />
           </div>
-          {/* Styled Text: GINB in white, TOOLS in red */}
+          {/* Styled Text: GINM in white, TOOLS in red */}
           <div className="-mt-2 flex min-w-0 flex-col items-center sm:-mt-0 sm:-ml-3 sm:items-start md:-ml-4 lg:-ml-5">
             <h2 className="text-5xl font-black tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">GINM</span>

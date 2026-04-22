@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Image
               src={ginbLogo}
-              alt="GINB Tools Logo"
+              alt="GINM Tools Logo"
               width={373}
               height={125}
               className="h-20 w-auto object-contain"
@@ -51,22 +51,16 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               <li>
                 <a
-                  href="mailto:sales@ginbtools.com"
+                  href="mailto:ginmtools@gmail.com"
                   className="text-sm text-gray-500 transition-colors hover:text-brand-red"
                 >
-                  sales@ginbtools.com
+                  ginmtools@gmail.com
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+491234567890"
-                  className="text-sm text-gray-500 transition-colors hover:text-brand-red"
-                >
-                  +49 (0) 123 456 7890
-                </a>
-              </li>
-              <li className="text-sm text-gray-500">
-                Stuttgart, Germany
+              <li className="text-sm leading-relaxed text-gray-500">
+                Fatemabai Ismailji Alibhoy Rangwala Bldg.<br />
+                Murad Khan Road, Khori Garden<br />
+                Karachi 74000, Pakistan
               </li>
             </ul>
           </div>
@@ -75,7 +69,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-800 pt-8 sm:flex-row">
           <p className="text-xs text-gray-600">
-            &copy; {currentYear} GINB Tools GmbH. All rights reserved.
+            &copy; {currentYear} GINM Tools GmbH. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-gray-600 transition-colors hover:text-gray-400">

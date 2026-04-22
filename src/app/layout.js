@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "GINB Tools | Professional Tool Supplier Since 1958",
+  title: "GINM Tools | Professional Tool Supplier Since 1958",
   description:
     "Industrial-grade hand tools, power tools, and precision instruments. Trusted B2B supplier serving enterprises, construction firms, and manufacturers worldwide since 1958. ISO 9001 certified.",
   keywords: [
@@ -19,10 +19,10 @@ export const metadata = {
     "power tools supplier",
     "bulk tool orders",
     "professional tools",
-    "GINB Tools",
+    "GINM Tools",
   ],
   openGraph: {
-    title: "GINB Tools | Professional Tool Supplier Since 1958",
+    title: "GINM Tools | Professional Tool Supplier Since 1958",
     description:
       "Industrial-grade tools engineered for performance. Trusted by enterprises worldwide.",
     type: "website",

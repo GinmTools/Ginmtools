@@ -41,7 +41,7 @@ export default function Heritage() {
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-gray-600">
               <p>
-                Founded in 1958, GINB Tools began as a small workshop specializing in 
+                Founded in 1958, GINM Tools began as a small workshop specializing in 
                 industrial-grade metallurgy. Over six decades, we&apos;ve grown into one 
                 of Europe&apos;s most trusted B2B tool suppliers.
               </p>
