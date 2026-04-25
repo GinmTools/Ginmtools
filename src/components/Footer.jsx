@@ -51,13 +51,29 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               <li>
                 <a
-                  href="mailto:ginmtools@gmail.com"
+                  href="mailto:info@ginmtools.com"
                   className="text-sm text-gray-500 transition-colors hover:text-brand-red"
                 >
-                  ginmtools@gmail.com
+                  info@ginmtools.com
                 </a>
               </li>
-              <li className="text-sm leading-relaxed text-gray-500">
+              <li>
+                <a
+                  href="tel:+923269444314"
+                  className="text-sm text-gray-500 transition-colors hover:text-brand-red"
+                >
+                  +92 326 9444314
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+923012800404"
+                  className="text-sm text-gray-500 transition-colors hover:text-brand-red"
+                >
+                  +92 301 2800404
+                </a>
+              </li>
+              <li className="text-sm leading-relaxed text-gray-500 pt-2">
                 Fatemabai Ismailji Alibhoy Rangwala Bldg.<br />
                 Murad Khan Road, Khori Garden<br />
                 Karachi 74000, Pakistan

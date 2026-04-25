@@ -1,6 +1,6 @@
 /**
  * Production catalog data — 12 items with real Google Drive download links.
- * Thumbnails display the brand name text (no external images).
+ * Thumbnails are dynamically generated from the Google Drive file IDs.
  */
 export const catalogs = [
   {

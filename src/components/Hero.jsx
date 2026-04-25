@@ -50,7 +50,7 @@ export default function Hero() {
       {/* Slideshow Background */}
       {heroSlides.map((src, i) => (
         <div
-          key={src}
+          key={i}
           className="absolute inset-0 transition-opacity duration-[800ms] ease-in-out"
           style={{ opacity: i === current && !isTransitioning ? 1 : 0 }}
         >

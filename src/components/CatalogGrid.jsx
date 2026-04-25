@@ -1,9 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { Search, Download, FileText } from "lucide-react";
+import { Search, Download, FileText, Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 // Import catalogs data
 import { catalogs } from "../data/catalogs.js";
+
+/**
+ * Helper to get Google Drive thumbnail URL from download URL
+ */
+const getGDThumbnail = (url) => {
+  const match = url.match(/[?&]id=([^&]+)/);
+  if (match && match[1]) {
+    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w600`;
+  }
+  return null;
+};
 
 export default function CatalogGrid() {
   const [search, setSearch] = useState("");
@@ -60,20 +72,39 @@ export default function CatalogGrid() {
               id={`catalog-card-${catalog.id}`}
               className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:z-[1] after:h-0.5 after:origin-left after:scale-x-0 after:bg-brand-red after:transition-transform after:duration-300 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-100/80 group-hover:after:scale-x-100"
             >
-              {/* Brand Name Thumbnail */}
-              <div className="relative flex h-48 items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#232323] to-[#111111]">
-                {/* Decorative background pattern */}
-                <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} aria-hidden />
+              {/* UI Thumbnail Area */}
+              <div className="relative flex h-64 items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#232323] to-[#111111]">
+                {/* Real PDF Thumbnail from Google Drive */}
+                {getGDThumbnail(catalog.pdf_download_url) ? (
+                  <Image
+                    src={getGDThumbnail(catalog.pdf_download_url)}
+                    alt={catalog.title}
+                    fill
+                    className="object-cover opacity-80 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <>
+                    {/* Fallback Decorative background pattern */}
+                    <div className="pointer-events-none absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} aria-hidden />
+                    {/* Brand name as fallback */}
+                    <span className="relative z-[1] px-6 text-center text-lg font-extrabold uppercase tracking-wider text-white/90 transition-colors duration-300 group-hover:text-white">
+                      {catalog.title}
+                    </span>
+                  </>
+                )}
+
+                {/* Dark Vignette Overlay for readability */}
+                <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:from-black/40" />
+
                 {/* Red accent line */}
-                <div className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-brand-red to-red-400 transition-all duration-500 group-hover:w-full" aria-hidden />
+                <div className="absolute bottom-0 left-0 z-[2] h-[3px] w-0 bg-gradient-to-r from-brand-red to-red-500 transition-all duration-500 group-hover:w-full" aria-hidden />
+                
                 {/* PDF icon watermark */}
-                <FileText className="pointer-events-none absolute right-4 top-4 h-10 w-10 text-white/[0.06]" aria-hidden />
-                {/* Brand name */}
-                <span className="relative z-[1] px-6 text-center text-lg font-extrabold uppercase tracking-wider text-white/90 transition-colors duration-300 group-hover:text-white">
-                  {catalog.title}
-                </span>
+                <FileText className="absolute right-4 top-4 z-[2] h-8 w-8 text-white/30 drop-shadow-md" aria-hidden />
+                
                 {/* Category badge */}
-                <span className="absolute left-3 top-3 z-[2] rounded-md bg-brand-red/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                <span className="absolute left-3 top-3 z-[2] rounded-md bg-brand-red px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg backdrop-blur-sm">
                   {catalog.category}
                 </span>
               </div>
