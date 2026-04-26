@@ -1,7 +1,7 @@
-# GINB TOOLS: B2B Platform Web Architecture & Requirements Document
+# GINM TOOLS: B2B Platform Web Architecture & Requirements Document
 
 ## 1. Project Overview
-* **Business:** GINB TOOLS (Established 1958)
+* **Business:** GINM TOOLS (Established 1958)
 * **Type:** B2B Tool Supplier & Manufacturer
 * **Project Goal:** To design, develop, and deploy a high-trust, corporate web platform tailored for B2B lead generation. The primary conversion mechanisms are a gated PDF catalog library and a direct bulk-quote request system.
 
@@ -96,5 +96,5 @@ The platform will be built using a modern, scalable web architecture focused on 
 ---
 
 ## 6. Future Scalability (Phase 2 Considerations)
-* **Admin CRM Dashboard:** A secure `/admin` route allowing the GINB Tools sales team to view captured leads and export them to CSV.
+* **Admin CRM Dashboard:** A secure `/admin` route allowing the GINM Tools sales team to view captured leads and export them to CSV.
 * **Dynamic Catalog Manager:** A UI for the client to upload new PDFs to the cloud bucket and automatically generate a new card in the Catalog Library without requiring code deployments.
