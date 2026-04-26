@@ -85,7 +85,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-800 pt-8 sm:flex-row">
           <p className="text-xs text-gray-600">
-            &copy; {currentYear} GINM Tools GmbH. All rights reserved.
+            &copy; {currentYear} GINM Tools. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-xs text-gray-600 transition-colors hover:text-gray-400">
