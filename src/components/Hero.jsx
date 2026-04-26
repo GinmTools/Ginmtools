@@ -11,7 +11,7 @@ import heroSlide3 from "../images/hero-slides/pexels-collab-media-173741945-1506
 import heroSlide4 from "../images/hero-slides/pexels-cottonbro-7484788.webp";
 import heroSlide5 from "../images/hero-slides/pexels-ismaelcampos-16720099.webp";
 import heroSlide6 from "../images/hero-slides/pexels-karola-g-7285926.webp";
-import ginbIcon from "../images/ginb-icon.png";
+import ginmIcon from "../images/ginm-icon.png";
 
 const heroSlides = [
   heroSlide1,
@@ -76,7 +76,7 @@ export default function Hero() {
           {/* House Icon */}
           <div className="shrink-0 leading-none -mr-10 sm:-mr-[4.5rem] md:-mr-24 lg:-mr-28">
             <Image
-              src={ginbIcon}
+              src={ginmIcon}
               alt="GINM Tools Icon"
               width={293}
               height={176}

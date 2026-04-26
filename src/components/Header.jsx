@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import ginbLogo from "../images/ginb-logo-transparent.png";
+import ginmLogo from "../images/ginm-logo-transparent.png";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +41,7 @@ export default function Header() {
             }`}
           >
             <Image
-              src={ginbLogo}
+              src={ginmLogo}
               alt="GINM TOOLS — One Stop. All Solutions Since 1958"
               width={373}
               height={125}

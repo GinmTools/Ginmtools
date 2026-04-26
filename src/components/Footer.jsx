@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ginbLogo from "../images/ginb-logo-transparent.png";
+import ginmLogo from "../images/ginm-logo-transparent.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Image
-              src={ginbLogo}
+              src={ginmLogo}
               alt="GINM Tools Logo"
               width={373}
               height={125}
