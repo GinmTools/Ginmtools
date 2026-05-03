@@ -75,7 +75,7 @@ export default function CatalogGrid() {
             const thumbnailUrl = getGDThumbnail(catalog.pdf_download_url);
             const hasImageError = imageErrors.has(catalog.id);
             const showFallback = !thumbnailUrl || hasImageError;
-            
+
             return (
               <div
                 key={catalog.id}
@@ -110,10 +110,10 @@ export default function CatalogGrid() {
 
                   {/* Red accent line */}
                   <div className="absolute bottom-0 left-0 z-[2] h-[3px] w-0 bg-gradient-to-r from-brand-red to-red-500 transition-all duration-500 group-hover:w-full" aria-hidden />
-                  
+
                   {/* PDF icon watermark */}
                   <FileText className="absolute right-4 top-4 z-[2] h-8 w-8 text-white/30 drop-shadow-md" aria-hidden />
-                  
+
                   {/* Category badge */}
                   <span className="absolute left-3 top-3 z-[2] rounded-md bg-brand-red px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg backdrop-blur-sm">
                     {catalog.category}
@@ -132,7 +132,7 @@ export default function CatalogGrid() {
                     className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-red px-4 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-red-dark hover:shadow-md hover:shadow-red-500/20"
                   >
                     <Download className="h-4 w-4" />
-                    Download PDF
+                    View PDF
                   </a>
                 </div>
               </div>
